@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Produção Musical - DJ.Marcelo Ferreira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="payment-styles.css">
+    <style>
+        /* Estilos específicos para a página de cursos */
+        .courses-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .courses-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .courses-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .course-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .course-title {
+            flex: 1;
+        }
+        
+        .course-title h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .course-level {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .course-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        
+        .course-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .course-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .course-features li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .course-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .course-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .course-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .course-stats {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .author-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .courses-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .course-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .course-icon {
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <span>DJ.Marcelo Ferreira</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="index.html#about" class="nav-link">Sobre</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="cursos.html" class="nav-link active">Cursos</a></li>
+                <li><a href="index.html#services" class="nav-link">Serviços</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <h1>Cursos de Produção Musical</h1>
+            <p>Aprenda produção musical com um dos melhores produtores do Brasil. Cursos completos do básico ao avançado.</p>
+        </div>
+    </section>
+
+    <!-- Cursos Section -->
+    <section class="courses" style="padding: 80px 0;">
+        <div class="container">
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="course-title">
+                        <h3>Produção Musical Básica</h3>
+                        <span class="course-level">Iniciante</span>
+                    </div>
+                </div>
+                <div class="course-price">R$ 297</div>
+                <div class="course-description">
+                    Aprenda os fundamentos da produção musical, desde a teoria musical até a gravação e mixagem básica. Ideal para quem está começando na música.
+                </div>
+                <ul class="course-features">
+                    <li>20 horas de conteúdo em vídeo</li>
+                    <li>Teoria musical aplicada</li>
+                    <li>Introdução ao DAW (Digital Audio Workstation)</li>
+                    <li>Gravação e edição de áudio</li>
+                    <li>Mixagem básica</li>
+                    <li>Masterização introdutória</li>
+                    <li>Certificado de conclusão</li>
+                    <li>Suporte via WhatsApp</li>
+                </ul>
+                <button class="course-btn buy-btn" data-course-id="basico">Quero Me Inscrever</button>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="course-title">
+                        <h3>Produção Musical Avançada</h3>
+                        <span class="course-level">Avançado</span>
+                    </div>
+                </div>
+                <div class="course-price">R$ 597</div>
+                <div class="course-description">
+                    Domine técnicas avançadas de produção musical, mixagem profissional e masterização. Para quem já tem conhecimento básico e quer se profissionalizar.
+                </div>
+                <ul class="course-features">
+                    <li>40 horas de conteúdo em vídeo</li>
+                    <li>Técnicas avançadas de mixagem</li>
+                    <li>Masterização profissional</li>
+                    <li>Produção de diferentes gêneros</li>
+                    <li>Uso de plugins profissionais</li>
+                    <li>Análise de referências musicais</li>
+                    <li>Projetos práticos</li>
+                    <li>Mentoria individual</li>
+                    <li>Certificado de conclusão</li>
+                </ul>
+                <button class="course-btn buy-btn" data-course-id="avancado">Quero Me Inscrever</button>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="course-title">
+                        <h3>Gravação e Captação de Áudio</h3>
+                        <span class="course-level">Intermediário</span>
+                    </div>
+                </div>
+                <div class="course-price">R$ 397</div>
+                <div class="course-description">
+                    Aprenda técnicas profissionais de gravação, posicionamento de microfones e captação de diferentes instrumentos e vozes.
+                </div>
+                <ul class="course-features">
+                    <li>25 horas de conteúdo em vídeo</li>
+                    <li>Tipos de microfones e suas aplicações</li>
+                    <li>Posicionamento e técnicas de gravação</li>
+                    <li>Gravação de vocais</li>
+                    <li>Gravação de instrumentos</li>
+                    <li>Acústica básica</li>
+                    <li>Equipamentos necessários</li>
+                    <li>Certificado de conclusão</li>
+                </ul>
+                <button class="course-btn buy-btn" data-course-id="gravacao">Quero Me Inscrever</button>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="course-title">
+                        <h3>Mixagem e Masterização</h3>
+                        <span class="course-level">Avançado</span>
+                    </div>
+                </div>
+                <div class="course-price">R$ 497</div>
+                <div class="course-description">
+                    Domine as técnicas de mixagem e masterização que são usadas pelos maiores produtores do mundo. Aprenda a finalizar suas produções com qualidade profissional.
+                </div>
+                <ul class="course-features">
+                    <li>30 horas de conteúdo em vídeo</li>
+                    <li>Fundamentos da mixagem</li>
+                    <li>Equalização avançada</li>
+                    <li>Compressão e dinâmica</li>
+                    <li>Reverb e efeitos espaciais</li>
+                    <li>Masterização para streaming</li>
+                    <li>Análise espectral</li>
+                    <li>Projetos práticos</li>
+                    <li>Certificado de conclusão</li>
+                </ul>
+                <button class="course-btn buy-btn" data-course-id="mixagem">Quero Me Inscrever</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="course-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Alunos Formados</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Taxa de Satisfação</p>
+                </div>
+                <div class="stat-item">
+                    <h3>7.9</h3>
+                    <p>Avaliação Média</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: #333;">Depoimentos dos Alunos</h2>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "O curso de Produção Musical Básica foi exatamente o que eu precisava para começar minha jornada na música. O Marcelo explica de forma clara e didática, e o suporte é excelente!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                        <h4>Ana Silva</h4>
+                        <p>Produtora Musical</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "Depois do curso avançado, consegui produzir minha primeira música profissional. As técnicas ensinadas são realmente utilizadas no mercado e fazem toda a diferença na qualidade final."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <div class="author-info">
+                        <h4>Carlos Santos</h4>
+                        <p>Músico Independente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "O curso de Mixagem e Masterização me deu as ferramentas necessárias para trabalhar profissionalmente. Hoje trabalho em um estúdio e uso as técnicas aprendidas diariamente."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <h4>Mariana Costa</h4>
+                        <p>Engenheira de Som</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Interessado em algum curso? Vamos conversar!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@produtormusical.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(91) 99188-9869</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>(91) 99188-9869</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Belém, PA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulário -->
+                <form class="contact-form" action="https://formspree.io/f/SEU_FORM_ID_AQUI" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Seu Telefone">
+                    </div>
+                    <div class="form-group">
+                        <select name="course" required>
+                            <option value="">Selecione o Curso de Interesse</option>
+                            <option value="basico">Produção Musical Básica - R$ 297</option>
+                            <option value="avancado">Produção Musical Avançada - R$ 597</option>
+                            <option value="gravacao">Gravação e Captação de Áudio - R$ 397</option>
+                            <option value="mixagem">Mixagem e Masterização - R$ 497</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Sua Mensagem" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DJ.Marcelo Ferreira</h4>
+                    <p>Transformando ideias em realidade sonora</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#portfolio">Portfólio</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@produtormusical.com</p>
+                    <p>(91) 99188-9869</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DJ.Marcelo Ferreira. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mercadopago-config.js"></script>
+    <script src="mercadopago-integration.js"></script>
+    <script src="payment-system.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixagem & Masterização - Produtor Musical</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .pricing-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .pricing-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        .pricing-card.featured::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        .price span {
+            font-size: 1.5rem;
+            color: #666;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <span>Produtor Musical</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Início</a></li>
+                <li><a href="../index.html#about" class="nav-link">Sobre</a></li>
+                <li><a href="../index.html#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="../index.html#services" class="nav-link">Serviços</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="service-hero">
+        <div class="container">
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Voltar ao Início
+            </a>
+            <h1>Mixagem & Masterização</h1>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+                Balanceamento perfeito e polimento final para que sua música soe profissional em qualquer plataforma
+            </p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin: 60px 0;">
+                <div>
+                    <h2>Por que escolher nossa mixagem?</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                        Nossa mixagem e masterização transformam suas gravações em produções profissionais. 
+                        Utilizamos técnicas avançadas e equipamentos de última geração para garantir que 
+                        sua música tenha o impacto sonoro perfeito.
+                    </p>
+                    
+                    <h3 style="color: #667eea; margin-bottom: 20px;">Nossas especialidades:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 15px 0; display: flex; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: #667eea; margin-right: 15px;"></i>
+                            Mixagem estéreo profissional
+                        </li>
+                        <li style="margin: 15px 0; display: flex; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: #667eea; margin-right: 15px;"></i>
+                            Masterização para streaming
+                        </li>
+                        <li style="margin: 15px 0; display: flex; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: #667eea; margin-right: 15px;"></i>
+                            Versões para diferentes formatos
+                        </li>
+                        <li style="margin: 15px 0; display: flex; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: #667eea; margin-right: 15px;"></i>
+                            Equalização e compressão avançada
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Processo de Mixagem</h2>
+                    <div style="background: #f8f9fa; padding: 40px; border-radius: 15px;">
+                        <h4>1. Análise do Material</h4>
+                        <p>Estudo detalhado de cada faixa e planejamento da mixagem</p>
+                        
+                        <h4>2. Balanceamento</h4>
+                        <p>Equilíbrio perfeito entre todos os elementos musicais</p>
+                        
+                        <h4>3. Processamento</h4>
+                        <p>Aplicação de efeitos e tratamento de áudio</p>
+                        
+                        <h4>4. Masterização</h4>
+                        <p>Polimento final e otimização para diferentes plataformas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Pacotes de Mixagem & Masterização</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem;">
+                Escolha o pacote ideal para seu projeto
+            </p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <div class="price">R$ 800<span>/música</span></div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0; text-align: left;">
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Mixagem estéreo</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Masterização básica</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> 1 revisão incluída</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Arquivos WAV 24bit</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn" style="width: 100%;">Escolher Plano</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Profissional</h3>
+                    <div class="price">R$ 1.500<span>/música</span></div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0; text-align: left;">
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Mixagem estéreo avançada</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Masterização para streaming</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> 3 revisões incluídas</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Múltiplos formatos</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Arquivos WAV 32bit</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn" style="width: 100%;">Escolher Plano</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">R$ 2.500<span>/música</span></div>
+                    <ul style="list-style: none; padding: 0; margin: 30px 0; text-align: left;">
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Mixagem estéreo premium</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Masterização completa</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Revisões ilimitadas</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Todos os formatos</li>
+                        <li style="margin: 10px 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 10px;"></i> Consultoria musical</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn" style="width: 100%;">Escolher Plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Pronto para mixar sua música?</h2>
+            <p style="font-size: 1.3rem; margin: 20px 0 40px;">
+                Entre em contato e agende sua mixagem profissional
+            </p>
+            <a href="../index.html#contact" class="btn btn-white" style="padding: 15px 30px; font-size: 1.1rem;">
+                <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i>
+                Agendar Mixagem
+            </a>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

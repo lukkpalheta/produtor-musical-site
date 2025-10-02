@@ -1,0 +1,79 @@
+﻿# 📞 COMO ALTERAR INFORMAÇÕES DE CONTATO
+
+## 🎯 Onde Estão as Informações Atuais
+
+### **Página Principal (index.html):**
+- Email: contato@produtormusical.com
+- Telefone: (11) 99999-9999
+- Localização: São Paulo, SP
+
+### **Páginas de Serviços:**
+- Todas as páginas têm links de contato
+- Telefone nos botões "Ligar Agora"
+
+## 🔧 Passo a Passo para Alterar
+
+### **1. Abrir o Arquivo Principal**
+- Abra o arquivo index.html no Notepad
+- Use Ctrl+F para buscar as informações
+
+### **2. Substituir Email**
+- Busque: contato@produtormusical.com
+- Substitua por: seuemail@exemplo.com
+
+### **3. Substituir Telefone**
+- Busque: (11) 99999-9999
+- Substitua por: (11) 98765-4321
+
+### **4. Substituir Localização**
+- Busque: São Paulo, SP
+- Substitua por: Sua Cidade, SE
+
+## 📱 Adicionando WhatsApp
+
+### **No formulário de contato, adicione:**
+`html
+<div class="contact-item">
+    <i class="fab fa-whatsapp"></i>
+    <div>
+        <h4>WhatsApp</h4>
+        <p>(11) 98765-4321</p>
+    </div>
+</div>
+`
+
+## �� Adicionando Redes Sociais
+
+### **Instagram:**
+`html
+<a href="https://instagram.com/seuusuario" target="_blank">
+    <i class="fab fa-instagram"></i> @seuusuario
+</a>
+`
+
+### **YouTube:**
+`html
+<a href="https://youtube.com/seucanal" target="_blank">
+    <i class="fab fa-youtube"></i> Seu Canal
+</a>
+`
+
+## ✅ Checklist de Alterações
+
+- [ ] Alterar email na página principal
+- [ ] Alterar telefone na página principal
+- [ ] Alterar localização
+- [ ] Adicionar WhatsApp
+- [ ] Adicionar redes sociais
+- [ ] Testar no navegador
+
+## 🚀 Próximos Passos
+
+1. Abra index.html no Notepad
+2. Use Ctrl+F para buscar e substituir
+3. Salve o arquivo
+4. Teste no navegador
+5. Repita para outras páginas se necessário
+
+---
+**📞 Agora você pode personalizar suas informações de contato!**

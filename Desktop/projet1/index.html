@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtor Musical DJ.Marcelo Ferreira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="video-thumbnails.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <span>Produtor Musical DJ.Marcelo Ferreira</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="#services" class="nav-link">Serviços</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+                
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforme sua música em arte</h1>
+            <p>Produtor musical especializado em criar experiências sonoras únicas e memoráveis</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Ver Portfólio</a>
+                <a href="#contact" class="btn btn-secondary">Fale Comigo</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="music-visualization">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Mim</h2>
+                    <p>Com mais de 10 anos de experiência na indústria musical, dedico-me a transformar ideias em realidade sonora. Minha paixão é criar produções que não apenas soam bem, mas que contam histórias e emocionam.</p>
+                    <p>Especializado em diversos gêneros musicais, trabalho com artistas independentes e grandes gravadoras, sempre buscando a excelência técnica e artística em cada projeto.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>Projetos Produzidos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Artistas Atendidos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Sua Foto Aqui</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <p>Alguns dos meus trabalhos mais recentes</p>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="pop">Pop</button>
+                <button class="filter-btn" data-filter="rock">Rock</button>
+                <button class="filter-btn" data-filter="electronic">Eletrônica</button>
+                <button class="filter-btn" data-filter="jazz">Jazz</button>
+                <button class="filter-btn" data-filter="videos">Vídeos</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Projeto 1 - Pop com Áudio -->
+                <div class="portfolio-item" data-category="rock videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-01.PNG">
+                            <source src="midia/videos/video-01.mp4" type="video/mp4">
+                            <source src="midia/videos/cidade-noturna.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small>Adicione o arquivo cidade-noturna.mp4</small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 - Rock com Vídeo -->
+                <div class="portfolio-item" data-category="rock videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-02.PNG">
+                            <source src="midia/videos/video-02.mp4" type="video/mp4">
+                            <source src="midia/videos/cidade-noturna.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small>Adicione o arquivo cidade-noturna.mp4</small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 - Eletrônica com Vídeo -->
+                <div class="portfolio-item" data-category="electronic videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-03.PNG">
+                            <source src="midia/videos/video-03.mp4" type="video/mp4">
+                            <source src="midia/videos/digital-dreams.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 - Jazz com Vídeo -->
+                <div class="portfolio-item" data-category="jazz videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-04.PNG">
+                            <source src="midia/videos/video-04.mp4" type="video/mp4">
+                            <source src="midia/videos/jazz-fusion.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 - Pop com Vídeo -->
+                <div class="portfolio-item" data-category="pop videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-05.PNG">
+                            <source src="midia/videos/video-05.mp4" type="video/mp4">
+                            <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6 - Rock com Áudio -->
+                <div class="portfolio-item" data-category="pop videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-06.PNG">
+                            <source src="midia/videos/video-06.mp4" type="video/mp4">
+                            <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		<!-- Projeto 6 - Rock com Áudio -->
+        <div class="portfolio-item" data-category="pop videos">
+            <div class="portfolio-video" onclick="playVideo(this)">
+                <video poster="midia/imagens/imag-07.PNG">
+                    <source src="midia/videos/video-07.mp4" type="video/mp4">
+                    <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                    <div class="video-fallback">
+                        <i class="fas fa-video"></i>
+                        <p></p>
+                        <small></small>
+                    </div>
+                </video>
+                <div class="portfolio-overlay">
+                    <h4></h4>
+                    <p></p>
+                    <div class="portfolio-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- Projeto 6 - Rock com Áudio -->
+        <div class="portfolio-item" data-category="pop videos">
+            <div class="portfolio-video" onclick="playVideo(this)">
+                <video poster="midia/imagens/imag-08.PNG">
+                    <source src="midia/videos/video-08.mp4" type="video/mp4">
+                    <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                    <div class="video-fallback">
+                        <i class="fas fa-video"></i>
+                        <p></p>
+                        <small></small>
+                    </div>
+                </video>
+                <div class="portfolio-overlay">
+                    <h4></h4>
+                    <p></p>
+                    <div class="portfolio-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- Projeto 6 - Rock com Áudio -->
+        <div class="portfolio-item" data-category="pop videos">
+            <div class="portfolio-video" onclick="playVideo(this)">
+                <video poster="midia/imagens/imag-09.PNG">
+                    <source src="midia/videos/video-09.mp4" type="video/mp4">
+                    <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                    <div class="video-fallback">
+                        <i class="fas fa-video"></i>
+                        <p></p>
+                        <small></small>
+                    </div>
+                </video>
+                <div class="portfolio-overlay">
+                    <h4></h4>
+                    <p></p>
+                    <div class="portfolio-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- Projeto 6 - Rock com Áudio -->
+        <div class="portfolio-item" data-category="pop videos">
+            <div class="portfolio-video" onclick="playVideo(this)">
+                <video poster="midia/imagens/imag-11.PNG">
+                    <source src="midia/videos/video-11.mp4" type="video/mp4">
+                    <source src="midia/videos/amor-virtual.webm" type="video/webm">
+                    <div class="video-fallback">
+                        <i class="fas fa-video"></i>
+                        <p></p>
+                        <small></small>
+                    </div>
+                </video>
+                <div class="portfolio-overlay">
+                    <h4></h4>
+                    <p></p>
+                    <div class="portfolio-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Projeto 7 - Making of com Vídeo -->
+                <div class="portfolio-item" data-category="videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-10.PNG">
+                            <source src="midia/videos/video-10.mp4" type="video/mp4">
+                            <source src="" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p>Vídeo não disponível</p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 8 - Live Session com Vídeo -->
+                <div class="portfolio-item" data-category="videos">
+                    <div class="portfolio-video" onclick="playVideo(this)">
+                        <video poster="midia/imagens/imag-18.PNG">
+                            <source src="midia/videos/video-18.mp4" type="video/mp4">
+                            <source src="midia/videos/live-session.webm" type="video/webm">
+                            <div class="video-fallback">
+                                <i class="fas fa-video"></i>
+                                <p></p>
+                                <small></small>
+                            </div>
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h4></h4>
+                            <p></p>
+                            <div class="portfolio-details">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <p>O que posso fazer por você</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Gravação Profissional</h3>
+                    <p>Estúdio equipado com tecnologia de ponta para capturar cada detalhe da sua performance com qualidade excepcional.</p>
+                    <ul>
+                        <li>Gravação multipista</li>
+                        <li>Equipamentos profissionais</li>
+                        <li>Acústica otimizada</li>
+                    </ul>
+                    <a href="paginas/gravacao-profissional.html" class="btn btn-outline">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Mixagem & Masterização</h3>
+                    <p>Balanceamento perfeito e polimento final para que sua música soe profissional em qualquer plataforma.</p>
+                    <ul>
+                        <li>Mixagem estéreo</li>
+                        <li>Masterização para streaming</li>
+                        <li>Versões para diferentes formatos</li>
+                    </ul>
+                    <a href="paginas/mixagem-masterizacao.html" class="btn btn-outline">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Produção Musical</h3>
+                    <p>Desenvolvimento completo de arranjos, instrumentação e direção artística para dar vida à sua visão musical.</p>
+                    <ul>
+                        <li>Arranjos personalizados</li>
+                        <li>Programação de instrumentos</li>
+                        <li>Direção artística</li>
+                    </ul>
+                    <a href="paginas/producao-musical.html" class="btn btn-outline">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Consultoria Musical</h3>
+                    <p>Orientação especializada para artistas e bandas que buscam aprimorar seu som e carreira musical.</p>
+                    <ul>
+                        <li>Análise de material</li>
+                        <li>Estratégias de lançamento</li>
+                        <li>Desenvolvimento de identidade sonora</li>
+                    </ul>
+                    <a href="paginas/consultoria-musical.html" class="btn btn-outline">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Vamos criar algo incrível juntos</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@produtormusical.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(91) 99188-9869</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>(91) 99188-9869</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Belém, PA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulário com Formspree -->
+                <form class="contact-form" action="https://formspree.io/f/SEU_FORM_ID_AQUI" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <!-- Campos ocultos para Formspree -->
+                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    <input type="hidden" name="_subject" value="Nova Mensagem do Site - Produtor Musical">
+                    <input type="hidden" name="_replyto" value="">
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Produtor Musical</h3>
+                    <p>Transformando ideias em realidade sonora</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#home">Cursos</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@produtormusical.com</p>
+                    <p>(91) 99188-9869</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Produtor Musical. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Player de Áudio -->
+    <div id="audioPlayer" class="audio-player" style="display: none;">
+        <div class="player-content">
+            <div class="player-info">
+                <h4 id="playerTitle">Tocando...</h4>
+                <p id="playerArtist">Artista</p>
+            </div>
+            <div class="player-controls">
+                <button id="playPauseBtn" onclick="togglePlayPause()">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="stopBtn" onclick="stopAudio()">
+                    <i class="fas fa-stop"></i>
+                </button>
+            </div>
+            <div class="player-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="video-control.js"></script>
+    <script src="video-click.js"></script>
+    <script>
+        // Função global para tocar vídeo
+        function playVideo(container) {
+            const video = container.querySelector("video");
+            
+            if (video) {
+                // Pausar todos os outros vídeos
+                pauseAllVideos();
+                
+                // Tocar o vídeo selecionado
+                video.play();
+                container.classList.add("playing");
+            }
+        }
+        
+        // Função para pausar todos os vídeos
+        function pauseAllVideos() {
+            const allVideos = document.querySelectorAll(".portfolio-video video");
+            const allContainers = document.querySelectorAll(".portfolio-video");
+            
+            allVideos.forEach(video => {
+                video.pause();
+            });
+            
+            allContainers.forEach(container => {
+                container.classList.remove("playing");
+            });
+        }
+    </script>
+</body>
+</html>

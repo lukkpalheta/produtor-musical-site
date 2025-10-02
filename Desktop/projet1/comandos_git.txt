@@ -1,0 +1,23 @@
+﻿# Comandos para configurar o Git e enviar para GitHub:
+
+# 1. Configurar Git (substitua pelos seus dados):
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"
+
+# 2. Inicializar repositório:
+git init
+
+# 3. Adicionar todos os arquivos:
+git add .
+
+# 4. Fazer primeiro commit:
+git commit -m "Primeiro commit: site completo"
+
+# 5. Criar repositório no GitHub e conectar:
+# Vá para https://github.com e crie um novo repositório
+# Depois execute (substitua 'seu-usuario' e 'nome-do-repositorio'):
+git remote add origin https://github.com/seu-usuario/nome-do-repositorio.git
+
+# 6. Enviar para GitHub:
+git branch -M main
+git push -u origin main
